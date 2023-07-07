@@ -44,7 +44,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 
 my_cur.execute("SELECT * FROM fruit_load_list")
-my_data_row = my_cur.fetchone()
+my_data_rows = my_cur.fetchall()
 streamlit.header("Fruit Load List Contains:")
 streamlit.dataframe(my_data_row)
 
