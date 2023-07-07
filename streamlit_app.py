@@ -43,9 +43,9 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 
-my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+my_cur.execute("SELECT * FROM fruit_load_list")
 my_data_row = my_cur.fetchone()
-streamlit.text("Hello from Snowflake:")
+streamlit.text("Fruit Load List Contains:")
 streamlit.text(my_data_row)
 
 
